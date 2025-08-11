@@ -7,7 +7,7 @@ st.title("🤖 Chatbot Seperti ChatGPT")
 def get_ai_rensponse(user_input, chat_history):
 
     try:
-        api_key = "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"
+        api_key = "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"
     except KeyError:
         st.error("API key tidak ditemukan. Pastikan Anda telah mengatur API key di secrets.")
         return "Error: API key tidak ditemukan."
@@ -16,7 +16,7 @@ def get_ai_rensponse(user_input, chat_history):
 
     try: 
         response = requests.post(
-            "https://api.openai.com/v1/chat/completions",
+            "https://openrouter.ai/api/v1/chat/completions",
             headers={
                 "Content-Type": "application/json",
                 "Authorization": f"Bearer {api_key}"
